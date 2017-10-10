@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C125EB61F8CBF6200A436B8 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C125EB51F8CBF6200A436B8 /* UIDevice.swift */; };
 		2C1D86C21F74D7D5004CD0A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D86C11F74D7D5004CD0A1 /* AppDelegate.swift */; };
 		2C1D86C41F74D7D5004CD0A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D86C31F74D7D5004CD0A1 /* ViewController.swift */; };
 		2C1D86C71F74D7D5004CD0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D86C51F74D7D5004CD0A1 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C125EB51F8CBF6200A436B8 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		2C1D86BE1F74D7D5004CD0A1 /* JSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1D86C11F74D7D5004CD0A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C1D86C31F74D7D5004CD0A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				2C1D86C81F74D7D5004CD0A1 /* Assets.xcassets */,
 				2C1D86CA1F74D7D6004CD0A1 /* LaunchScreen.storyboard */,
 				2C1D86CD1F74D7D6004CD0A1 /* Info.plist */,
+				2C125EB51F8CBF6200A436B8 /* UIDevice.swift */,
 			);
 			path = JSTest;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1D86C41F74D7D5004CD0A1 /* ViewController.swift in Sources */,
+				2C125EB61F8CBF6200A436B8 /* UIDevice.swift in Sources */,
 				2C1D86C21F74D7D5004CD0A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +309,7 @@
 				2C1D86D21F74D7D6004CD0A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

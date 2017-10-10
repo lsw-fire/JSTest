@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         let array = result?.toString().components(separatedBy: "|")
 
-        textView.text = ""
+        textView.text = UIDevice.identifierByKeychain()
     }
     
 //    func handleJavaScriptArray(value:JSValue) -> Void {
