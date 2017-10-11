@@ -8,12 +8,27 @@
 
 import UIKit
 
-extension UIDevice {
+public class Identifier{
+    
+    private let syncQueue = DispatchQueue(label: "lsw.identifier")
+    
+    static let sharedInstance = Identifier()
+    
+    //to disable instantiantion
+    private init(){
+        
+    }
+    
+    public var UUID : String{
+        get{
+            return syncQueue.sync {
+                identifierByKeychain()
+            }
+        }
+    }
+    
+    private func identifierByKeychain() -> String{
 
-    public class func identifierByKeychain() -> String{
-        
-        //objc_sync_enter(NotificationCenter.default)
-        
         let service = "CreateDeviceIndentifierByKeychain"
         let account = "VirtualDeviceIndentifier"
         
@@ -70,9 +85,8 @@ extension UIDevice {
         }
         
         return recommendDeviceIdentifier!
-        
-        //objc_sync_exit(NotificationCenter.default)
-        
+
     }
-    
+
 }
+

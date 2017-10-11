@@ -30,7 +30,17 @@ class ViewController: UIViewController {
         
         let array = result?.toString().components(separatedBy: "|")
 
-        textView.text = UIDevice.identifierByKeychain()
+        let concurrentQueue = DispatchQueue(label: "lsw.identifier.c", attributes: .concurrent)
+        
+        for counter in 0 ..< 100{
+            concurrentQueue.async {
+                //let uuid = Identifier.sharedInstance.UUID
+                //print("uuid: \(counter) \(#file) \(uuid)")
+                 print("uuid: \(counter) \(#file)")
+            }
+        }
+        
+        //textView.text
     }
     
 //    func handleJavaScriptArray(value:JSValue) -> Void {
