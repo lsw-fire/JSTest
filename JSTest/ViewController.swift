@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     let jsContext = JSContext()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,33 +29,51 @@ class ViewController: UIViewController {
         let result = jsContext?.evaluateScript(script);
         
         let array = result?.toString().components(separatedBy: "|")
-
+        
         let concurrentQueue = DispatchQueue(label: "lsw.identifier.c", attributes: .concurrent)
         
         for counter in 0 ..< 100{
             concurrentQueue.async {
                 //let uuid = Identifier.sharedInstance.UUID
                 //print("uuid: \(counter) \(#file) \(uuid)")
-                 print("uuid: \(counter) \(#file)")
+                print("uuid: \(counter) \(#file)")
             }
         }
         
-        //textView.text
+        var list = Array<String>()
+        
+        for a in array! {
+            
+            if !a.isEmpty {
+                let part1 = a.components(separatedBy: "/2")[0]
+                let part1Array = part1.components(separatedBy: "/1")
+                let s1 = part1Array[0]
+                let s2 = part1Array[1]
+                let s3 = a.components(separatedBy: "/2")[1]
+                
+                list.append(s1)
+                list.append(s2)
+                list.append(s3)
+            }
+            
+        }
+        
+        textView.text =  result?.toString()
     }
     
-//    func handleJavaScriptArray(value:JSValue) -> Void {
-//        guard let array: [String] = value.toArray() else {
-//            print("error")
-//        }
-//        
-//        
-//    }
-
+    //    func handleJavaScriptArray(value:JSValue) -> Void {
+    //        guard let array: [String] = value.toArray() else {
+    //            print("error")
+    //        }
+    //
+    //
+    //    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
