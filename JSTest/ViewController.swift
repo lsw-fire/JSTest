@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     
     let jsContext = JSContext()
     
+    let dateFormatter = DateFormatter()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
         // Do any additional setup after loading the view, typically from a nib.
         let path = Bundle.main.path(forResource: "Calendar", ofType: "js")
         let contentData = FileManager.default.contents(atPath: path!)
@@ -24,7 +29,7 @@ class ViewController: UIViewController {
         
         jsContext?.evaluateScript(content)
         
-        let script = "paiYue(2000)"
+        let script = "paiYue(2017)"
         
         let result = jsContext?.evaluateScript(script);
         
@@ -40,7 +45,11 @@ class ViewController: UIViewController {
             }
         }
         
-        var list = Array<String>()
+      
+        
+        var listJie = Array<(String,String)?>()
+        var listQi = Array<(String,String)?>()
+        var listLunar = Array<(String,String)?>()
         
         for a in array! {
             
@@ -51,9 +60,13 @@ class ViewController: UIViewController {
                 let s2 = part1Array[1]
                 let s3 = a.components(separatedBy: "/2")[1]
                 
-                list.append(s1)
-                list.append(s2)
-                list.append(s3)
+                let jie = buildSolarTerm(str: s1)
+                let qi = buildSolarTerm(str: s2)
+                let lunar = buildSolarTerm(str: s3)
+                
+                listJie.append(jie)
+                listQi.append(qi)
+                listLunar.append(lunar)
             }
             
         }
@@ -61,6 +74,25 @@ class ViewController: UIViewController {
         textView.text =  result?.toString()
     }
     
+    func buildSolarTerm(str:String) -> (String,String)? {
+        if let range = str.range(of: " ") {
+            //let startPos = s1.distance(from: s1.startIndex, to: range.lowerBound)
+            //let endPos = s1.distance(from: s1.startIndex, to: range.upperBound)
+            //print(startPos, endPos)
+
+            let name = str.substring(to: range.lowerBound)
+            let dateStr = str.substring(from: range.upperBound)
+            //let date = dateFormatter.date(from: dateStr)
+            
+            //print(dateFormatter.string(from: date!))
+            print(name)
+            
+            return(name,dateStr)
+        }
+        return nil
+    }
+            //print(da
+
     //    func handleJavaScriptArray(value:JSValue) -> Void {
     //        guard let array: [String] = value.toArray() else {
     //            print("error")
