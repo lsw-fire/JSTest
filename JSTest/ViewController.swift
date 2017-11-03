@@ -8,6 +8,7 @@
 
 import UIKit
 import JavaScriptCore
+import core
 
 class ViewController: UIViewController {
     
@@ -71,7 +72,14 @@ class ViewController: UIViewController {
             
         }
         
+        let hexagram = HexagramBuilder.createHexagramBy(dateTime: Date())
+        
+        let date20168170130 = Date(year: 2016, month: 8, day: 17, hour: 13, min: 30, second: 00)
+        let tHexagram = HexagramBuilder.createHexagramBy(dateTime: date20168170130)
+        
         textView.text =  result?.toString()
+    
+        
     }
     
     func buildSolarTerm(str:String) -> (String,String)? {
