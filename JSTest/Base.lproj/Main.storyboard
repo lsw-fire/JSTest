@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,21 +29,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqE-LE-tDN" customClass="HexagramPartView" customModule="JSTest" customModuleProvider="target">
+                                <rect key="frame" x="67" y="499" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="uCv-5X-suv"/>
+                                    <constraint firstAttribute="width" constant="240" id="yY8-g7-al3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="iAG-xX-XKV" secondAttribute="trailing" id="Mvv-b8-gza"/>
+                            <constraint firstItem="hqE-LE-tDN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O4e-Tm-wn7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hqE-LE-tDN" secondAttribute="bottom" constant="40" id="U1p-6h-14B"/>
                             <constraint firstItem="iAG-xX-XKV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aQo-NM-AU2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iAG-xX-XKV" secondAttribute="bottom" id="n50-A0-jQp"/>
                             <constraint firstItem="iAG-xX-XKV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="p0k-lu-d8w"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hexagramPartView" destination="hqE-LE-tDN" id="bhB-gq-bB4"/>
                         <outlet property="textView" destination="iAG-xX-XKV" id="n9f-ug-NHZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-188" y="-72.413793103448285"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="fV1-Wo-xrJ">
@@ -61,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Los-fJ-VK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="291"/>
+            <point key="canvasLocation" x="1081" y="-72"/>
         </scene>
     </scenes>
 </document>

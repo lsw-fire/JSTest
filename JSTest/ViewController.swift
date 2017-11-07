@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     let dateFormatter = DateFormatter()
    
+    @IBOutlet weak var hexagramPartView: HexagramPartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,12 +75,17 @@ class ViewController: UIViewController {
         
         let hexagram = HexagramBuilder.createHexagramBy(dateTime: Date())
         
-        let date20168170130 = Date(year: 2016, month: 8, day: 17, hour: 13, min: 30, second: 00)
-        let tHexagram = HexagramBuilder.createHexagramBy(dateTime: date20168170130)
-        
+        //let date20168170130 = Date(year: 2016, month: 8, day: 17, hour: 13, min: 30, second: 00)
+        //let tHexagram = HexagramBuilder.createHexagramBy(dateTime: date20168170130)
+        print(hexagram?.0.defaultValue.name,hexagram?.1.defaultValue.name)
         textView.text =  result?.toString()
     
+        let birthdayHexagram = Date(year: 1955, month: 8, day: 20, hour: 6, min: 05, second: 00)
+        let h = HexagramBuilder.createHexagramBy(dateTime: birthdayHexagram, isBirthday: true)
         
+        print(h?.0.defaultValue.name,h?.1.defaultValue.name)
+        
+        hexagramPartView.hexagramName = "蛊"
     }
     
     func buildSolarTerm(str:String) -> (String,String)? {

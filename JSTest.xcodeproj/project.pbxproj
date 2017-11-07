@@ -14,8 +14,26 @@
 		2C1D86C91F74D7D6004CD0A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D86C81F74D7D5004CD0A1 /* Assets.xcassets */; };
 		2C1D86CC1F74D7D6004CD0A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D86CA1F74D7D6004CD0A1 /* LaunchScreen.storyboard */; };
 		2C1D86D41F74D7ED004CD0A1 /* Calendar.js in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D86D31F74D7ED004CD0A1 /* Calendar.js */; };
+		2C2910C81FAFE9E20012741B /* core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2910C71FAFE9E20012741B /* core.framework */; };
+		2C2910C91FAFE9E20012741B /* core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2910C71FAFE9E20012741B /* core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C2910CC1FB150500012741B /* HexagramPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2910CB1FB150500012741B /* HexagramPartView.swift */; };
+		2C2910CE1FB1513D0012741B /* laoyin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C2910CD1FB1513D0012741B /* laoyin.png */; };
 		2CCEA2B41FA305C5000B643D /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEA2B31FA305C5000B643D /* AudioViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C2910CA1FAFE9E20012741B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C2910C91FAFE9E20012741B /* core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C125EB51F8CBF6200A436B8 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
@@ -27,6 +45,10 @@
 		2C1D86CB1F74D7D6004CD0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C1D86CD1F74D7D6004CD0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C1D86D31F74D7ED004CD0A1 /* Calendar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Calendar.js; sourceTree = "<group>"; };
+		2C2910C71FAFE9E20012741B /* core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2910CB1FB150500012741B /* HexagramPartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagramPartView.swift; sourceTree = "<group>"; };
+		2C2910CD1FB1513D0012741B /* laoyin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laoyin.png; sourceTree = "<group>"; };
+		2C59BC371FAC100D009BE07F /* core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCEA2B31FA305C5000B643D /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2910C81FAFE9E20012741B /* core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +67,8 @@
 		2C1D86B51F74D7D5004CD0A1 = {
 			isa = PBXGroup;
 			children = (
+				2C2910C71FAFE9E20012741B /* core.framework */,
+				2C59BC371FAC100D009BE07F /* core.framework */,
 				2C1D86C01F74D7D5004CD0A1 /* JSTest */,
 				2C1D86BF1F74D7D5004CD0A1 /* Products */,
 				2C1D86D31F74D7ED004CD0A1 /* Calendar.js */,
@@ -61,6 +86,7 @@
 		2C1D86C01F74D7D5004CD0A1 /* JSTest */ = {
 			isa = PBXGroup;
 			children = (
+				2C2910CD1FB1513D0012741B /* laoyin.png */,
 				2C1D86C11F74D7D5004CD0A1 /* AppDelegate.swift */,
 				2C1D86C31F74D7D5004CD0A1 /* ViewController.swift */,
 				2C1D86C51F74D7D5004CD0A1 /* Main.storyboard */,
@@ -69,6 +95,7 @@
 				2C1D86CD1F74D7D6004CD0A1 /* Info.plist */,
 				2C125EB51F8CBF6200A436B8 /* UIDevice.swift */,
 				2CCEA2B31FA305C5000B643D /* AudioViewController.swift */,
+				2C2910CB1FB150500012741B /* HexagramPartView.swift */,
 			);
 			path = JSTest;
 			sourceTree = "<group>";
@@ -83,6 +110,7 @@
 				2C1D86BA1F74D7D5004CD0A1 /* Sources */,
 				2C1D86BB1F74D7D5004CD0A1 /* Frameworks */,
 				2C1D86BC1F74D7D5004CD0A1 /* Resources */,
+				2C2910CA1FAFE9E20012741B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1D86D41F74D7ED004CD0A1 /* Calendar.js in Resources */,
+				2C2910CE1FB1513D0012741B /* laoyin.png in Resources */,
 				2C1D86CC1F74D7D6004CD0A1 /* LaunchScreen.storyboard in Resources */,
 				2C1D86C91F74D7D6004CD0A1 /* Assets.xcassets in Resources */,
 				2C1D86C71F74D7D5004CD0A1 /* Main.storyboard in Resources */,
@@ -149,6 +178,7 @@
 				2C1D86C41F74D7D5004CD0A1 /* ViewController.swift in Sources */,
 				2CCEA2B41FA305C5000B643D /* AudioViewController.swift in Sources */,
 				2C125EB61F8CBF6200A436B8 /* UIDevice.swift in Sources */,
+				2C2910CC1FB150500012741B /* HexagramPartView.swift in Sources */,
 				2C1D86C21F74D7D5004CD0A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

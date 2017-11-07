@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "85EBE6A98436A367D67E8A21D4CCBAD208ADAF5A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "85EBE6A98436A367D67E8A21D4CCBAD208ADAF5A" : 9223372036854775807,
+    "9065EF3F2BD79D88DB184D715EEA8ECFE95BD386" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A6BED088-E205-4DA0-9949-183A52C65EB9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "85EBE6A98436A367D67E8A21D4CCBAD208ADAF5A" : "JSTest\/",
+    "9065EF3F2BD79D88DB184D715EEA8ECFE95BD386" : "..\/..\/core"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JSTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JSTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lsw-fire\/JSTest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "85EBE6A98436A367D67E8A21D4CCBAD208ADAF5A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lsw-fire\/core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9065EF3F2BD79D88DB184D715EEA8ECFE95BD386"
+    }
+  ]
+}
