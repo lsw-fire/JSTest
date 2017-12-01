@@ -93,15 +93,48 @@ class HexagramPartView: UIView {
     }
     
     fileprivate var lbHexagramName: UILabel?
-    func setupLeftPart() -> UILabel {
+    fileprivate var lbTitleName: UILabel?
+    func setupLeftPart() -> UIStackView {
+        
         lbHexagramName = UILabel()
         if let lb = lbHexagramName{
             lb.text = ""
             lb.font = UIFont.systemFont(ofSize: 25)
             lb.textAlignment = .center
-            return lb
         }
-        return lbHexagramName!
+        lbTitleName = UILabel()
+        if let tLb = lbTitleName {
+            tLb.font = UIFont.systemFont(ofSize:15)
+            tLb.numberOfLines = 2
+            tLb.text = "主卦"
+            tLb.textAlignment = .center
+        }
+        
+        let view = UIStackView(arrangedSubviews: [lbHexagramName!,lbTitleName!])
+        view.axis = .vertical
+        view.alignment = .fill
+        view.distribution = .fillEqually
+        
+       
+        
+        
+        
+        
+        return view
+    }
+    
+    override func draw(_ rect: CGRect) {
+        
+        
+        
+        let ctx = UIGraphicsGetCurrentContext()
+        ctx?.beginPath()
+        ctx?.move(to: CGPoint(x: (lbHexagramName?.frame.origin.x)!, y: (lbHexagramName?.frame.origin.y)! + (lbHexagramName?.frame.height)!))
+        ctx?.addLine(to: CGPoint(x: (lbHexagramName?.frame.origin.x)! + (lbHexagramName?.frame.width)!, y: (lbHexagramName?.frame.origin.y)! + (lbHexagramName?.frame.height)!))
+        ctx?.setLineWidth(1)
+        ctx?.setStrokeColor(UIColor.red.cgColor)
+        ctx?.closePath()
+        ctx?.strokePath()
     }
     
     fileprivate var arrayView = Array<UIImageView>()

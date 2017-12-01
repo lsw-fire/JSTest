@@ -20,6 +20,8 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var hexagramPartView: HexagramPartView!
     
+    @IBOutlet weak var testFrameView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -71,6 +73,8 @@ class ViewController: UIViewController {
                 listLunar.append(lunar)
             }
             
+            //doAnimation()
+            doAnimationExt()
         }
         
         let hexagram = HexagramBuilder.createHexagramBy(dateTime: Date())
@@ -86,6 +90,13 @@ class ViewController: UIViewController {
         print(h?.0.defaultValue.name,h?.1.defaultValue.name)
         
         hexagramPartView.hexagramName = "蛊"
+        
+        let rect = CGRect(x: 0, y: 0, width: 200, height: 100)
+        let testH = HexagramPartView(frame: rect)
+        self.view.addSubview(testH)
+        
+        //self.testFrameView.setNeedsLayout()
+        //self.testFrameView.layoutIfNeeded()
     }
     
     func buildSolarTerm(str:String) -> (String,String)? {
@@ -115,6 +126,15 @@ class ViewController: UIViewController {
     //
     //    }
     
+    override func viewDidLayoutSubviews() {
+        //DispatchQueue.main.async {
+            //print(self.view.frame)
+        
+       
+        print(self.testFrameView.frame)
+        //}
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -135,5 +155,47 @@ class ViewController: UIViewController {
         // Don't forget to reset when view is being removed
         AppUtility.lockOrientation(.all)
     }
+    
+    var imgAngle = 0
+    func doAnimation() {
+        
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.duration = 5
+        animation.isAdditive = true
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = kCAFillModeForwards
+        animation.fromValue = NSNumber(value: imgAngle.degreesToRadians)
+        animation.toValue = NSNumber(value: (imgAngle + 90).degreesToRadians)
+        self.hexagramPartView.layer.add(animation, forKey: "90rotation")
+        
+        imgAngle += 90
+        if imgAngle > 270 {
+            imgAngle = 0
+        }
+    }
+    
+    func doAnimationExt() {
+        let zRotationKeyPath = "transform.rotation.z"
+        //let currentAngle = self.hexagramPartView.layer.value(forKeyPath: zRotationKeyPath) as! CGFloat
+        let angleToAdd = CGFloat(Double.pi * 2)
+        //self.hexagramPartView.layer.setValue((currentAngle + angleToAdd), forKey: zRotationKeyPath)
+        
+        let animation = CABasicAnimation(keyPath: zRotationKeyPath)
+        animation.duration = 5
+        animation.toValue = 0
+        animation.byValue = angleToAdd
+        
+        self.hexagramPartView.layer.add(animation, forKey: "90rotation")
+        
+        
+    }
 }
 
+extension BinaryInteger {
+    var degreesToRadians: Float { return Float(Int(self)) * .pi / 180 }
+}
+
+extension FloatingPoint {
+    var degreesToRadians: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
+}
