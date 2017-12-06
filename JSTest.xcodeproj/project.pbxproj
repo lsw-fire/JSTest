@@ -19,6 +19,10 @@
 		2C2910CC1FB150500012741B /* HexagramPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2910CB1FB150500012741B /* HexagramPartView.swift */; };
 		2C2910CE1FB1513D0012741B /* laoyin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C2910CD1FB1513D0012741B /* laoyin.png */; };
 		2CCEA2B41FA305C5000B643D /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEA2B31FA305C5000B643D /* AudioViewController.swift */; };
+		2CE7CC5E1FD77DCA00E27569 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE7CC5D1FD77DCA00E27569 /* FlipView.swift */; };
+		2CE7CC611FD77FE400E27569 /* yi-word.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE7CC5F1FD77FE400E27569 /* yi-word.png */; };
+		2CE7CC621FD77FE400E27569 /* yi-dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE7CC601FD77FE400E27569 /* yi-dragon.png */; };
+		2CE7CC661FD78FAA00E27569 /* FilpViewTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE7CC651FD78FAA00E27569 /* FilpViewTestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +54,10 @@
 		2C2910CD1FB1513D0012741B /* laoyin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laoyin.png; sourceTree = "<group>"; };
 		2C59BC371FAC100D009BE07F /* core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCEA2B31FA305C5000B643D /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		2CE7CC5D1FD77DCA00E27569 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		2CE7CC5F1FD77FE400E27569 /* yi-word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yi-word.png"; path = "JSTest/yi-word.png"; sourceTree = "<group>"; };
+		2CE7CC601FD77FE400E27569 /* yi-dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yi-dragon.png"; path = "JSTest/yi-dragon.png"; sourceTree = "<group>"; };
+		2CE7CC651FD78FAA00E27569 /* FilpViewTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilpViewTestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,8 @@
 		2C1D86B51F74D7D5004CD0A1 = {
 			isa = PBXGroup;
 			children = (
+				2CE7CC601FD77FE400E27569 /* yi-dragon.png */,
+				2CE7CC5F1FD77FE400E27569 /* yi-word.png */,
 				2C2910C71FAFE9E20012741B /* core.framework */,
 				2C59BC371FAC100D009BE07F /* core.framework */,
 				2C1D86C01F74D7D5004CD0A1 /* JSTest */,
@@ -96,6 +106,8 @@
 				2C125EB51F8CBF6200A436B8 /* UIDevice.swift */,
 				2CCEA2B31FA305C5000B643D /* AudioViewController.swift */,
 				2C2910CB1FB150500012741B /* HexagramPartView.swift */,
+				2CE7CC5D1FD77DCA00E27569 /* FlipView.swift */,
+				2CE7CC651FD78FAA00E27569 /* FilpViewTestController.swift */,
 			);
 			path = JSTest;
 			sourceTree = "<group>";
@@ -162,7 +174,9 @@
 			files = (
 				2C1D86D41F74D7ED004CD0A1 /* Calendar.js in Resources */,
 				2C2910CE1FB1513D0012741B /* laoyin.png in Resources */,
+				2CE7CC621FD77FE400E27569 /* yi-dragon.png in Resources */,
 				2C1D86CC1F74D7D6004CD0A1 /* LaunchScreen.storyboard in Resources */,
+				2CE7CC611FD77FE400E27569 /* yi-word.png in Resources */,
 				2C1D86C91F74D7D6004CD0A1 /* Assets.xcassets in Resources */,
 				2C1D86C71F74D7D5004CD0A1 /* Main.storyboard in Resources */,
 			);
@@ -176,10 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1D86C41F74D7D5004CD0A1 /* ViewController.swift in Sources */,
+				2CE7CC5E1FD77DCA00E27569 /* FlipView.swift in Sources */,
 				2CCEA2B41FA305C5000B643D /* AudioViewController.swift in Sources */,
 				2C125EB61F8CBF6200A436B8 /* UIDevice.swift in Sources */,
 				2C2910CC1FB150500012741B /* HexagramPartView.swift in Sources */,
 				2C1D86C21F74D7D5004CD0A1 /* AppDelegate.swift in Sources */,
+				2CE7CC661FD78FAA00E27569 /* FilpViewTestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

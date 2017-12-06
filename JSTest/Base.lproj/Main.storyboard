@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mwR-FO-ew2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,6 +89,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Los-fJ-VK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="-72"/>
+        </scene>
+        <!--Filp View Test Controller-->
+        <scene sceneID="eKt-1i-gO3">
+            <objects>
+                <viewController id="mwR-FO-ew2" customClass="FilpViewTestController" customModule="JSTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Stc-Zu-6dR"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Dh-xy-Znz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RvC-PW-r8f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWv-Pq-Wps" customClass="FlipView" customModule="JSTest" customModuleProvider="target">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="NgZ-p5-R7f"/>
+                                    <constraint firstAttribute="width" secondItem="fWv-Pq-Wps" secondAttribute="height" multiplier="1:1" id="PPY-CQ-BzG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fWv-Pq-Wps" firstAttribute="centerX" secondItem="RvC-PW-r8f" secondAttribute="centerX" id="91E-np-CcO"/>
+                            <constraint firstItem="fWv-Pq-Wps" firstAttribute="centerY" secondItem="RvC-PW-r8f" secondAttribute="centerY" id="SWD-NK-spC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flipView" destination="fWv-Pq-Wps" id="BeA-zo-nOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEW-uZ-ag0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="284"/>
         </scene>
     </scenes>
 </document>
